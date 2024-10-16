@@ -10,6 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.mapboxtest.testcase.TestCaseData
 import com.example.mapboxtest.testcase.TestCaseList
+import com.example.mapboxtest.testcase.flickeringmap.FlickeringMapActivity
 import com.example.mapboxtest.testcase.jumpyzooming.JumpyZoomingActivity
 import com.example.mapboxtest.ui.theme.MapboxTestTheme
 
@@ -26,6 +27,11 @@ class MainActivity : ComponentActivity() {
                                 title = "Jumpy zooming",
                                 description = "Zooming in and out near terrain peaks works badly.",
                                 activityClass = JumpyZoomingActivity::class.java
+                            ),
+                            TestCaseData(
+                                title = "Flickering map",
+                                description = "Map flickers with certain devices.",
+                                activityClass = FlickeringMapActivity::class.java
                             )
                         ),
                         onTestCaseClick = { testCase ->
